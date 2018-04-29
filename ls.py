@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import random
+import os
 
 description = '''An example bot to showcase the discord.ext.commands extension
 module.
@@ -74,4 +75,4 @@ async def _bot():
     await bot.say('<@303819081990275073> Is altijd cool!')
 
 
-bot.run('NDE0MzcwMTk3NTIxMDM5MzYw.DWmX1g.LLRlM2NpzNUk5vnhWSLcJQZtA0s')
+bot.run(os.environ['TOKEN'])
