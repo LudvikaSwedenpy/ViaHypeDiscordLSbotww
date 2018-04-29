@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import random
+import os
 
 client = discord.Client()
 
@@ -83,4 +84,4 @@ async def on_message(message):
     elif message.content.startswith('SwedishFantasy'):
         await client.send_message(message.channel, 'https://open.spotify.com/track/4zSSeTlH3sV6zq1Y94FYL5?si=QLcp2DUjQ8WLDTsqVdnj1A')
 		
-client.run('NDE0MzcwMTk3NTIxMDM5MzYw.DWmX1g.LLRlM2NpzNUk5vnhWSLcJQZtA0s') 
+client.run(os.environ['TOKEN']) 
